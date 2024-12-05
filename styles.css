@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+
+/* Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%) */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.5;
+    padding: 2em 0;
+    font-family: 'barlow semi condensed';
+    background-color: hsl(0, 0%, 81%);
+}
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    padding: 1em;
+    gap: 1.5em;
+}
+.card {
+    padding: 1.5em;
+    border-radius: 10px;
+}
+.heading {
+    display: flex;
+    gap: 1.3em;
+}
+img {
+    border-radius: 50%;
+}
+.white-font {
+    color: white;
+}
+.black-font {
+    color: black;
+}
+.heading span {
+    padding: 0;
+}
+.heading p {
+    padding: 0;
+    font-size: 1em;
+}
+span {
+    display: inline-block;
+    font-size: 13px;
+    padding: .7em 0;
+    color: hsl(0, 0%, 81%);
+}
+p {
+    padding: 1em 0 .3em;
+    font-size: 1.2rem;
+}
+.card-1 {
+    background-color: hsl(263, 55%, 52%);
+    grid-area: card-1;
+}
+.card-2 {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: card-2;
+}
+.card-3 {
+    background-color: #fff;
+    grid-area: card-3;
+
+}
+.card-4 {
+    background-color: hsl(219, 29%, 14%);
+    grid-area: card-4;
+}
+.card-5 {
+    background-color: #fff;
+    grid-area: card-5;
+}
+@media screen and ( min-width: 810px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        display: grid;
+        max-width: 800px;
+        grid-template-columns: repeat(2, 250px);
+        grid-template-rows: repeat(4, 310px);
+        grid-template-areas:
+        "card-1 card-1"
+        "card-2 card-3"
+        "card-4 card-4"
+        "card-5 card-5";
+        justify-content: center;
+    }
+}
+@media screen and ( min-width: 1200px ) {
+    .container {
+        display: grid;
+        max-width: 1300px;
+        grid-template-columns: repeat(4, 250px);
+        grid-template-rows: repeat(2, 310px);
+        grid-template-areas:
+        "card-1 card-1 card-2 card-5"
+        "card-3 card-4 card-4 card-5";
+        justify-content: center;
+    }
+}
