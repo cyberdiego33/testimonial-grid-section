@@ -19,7 +19,7 @@ body {
     line-height: 1.5;
     padding: 2em 0;
     font-family: 'barlow semi condensed';
-    background-color: hsl(0, 0%, 81%);
+    background-color: hsl(210, 46%, 95%);
 }
 .container {
     margin: 0 auto;
@@ -99,6 +99,7 @@ p {
         "card-4 card-4"
         "card-5 card-5";
         justify-content: center;
+        align-items: center;
     }
 }
 @media screen and ( min-width: 1200px ) {
